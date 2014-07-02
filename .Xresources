@@ -1,4 +1,6 @@
 #include "/home/owen/.Xresources_molokai"
+!#include "/home/owen/.Xresources_jwr"
+!#include "/home/owen/.Xresources_zenburn"
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
