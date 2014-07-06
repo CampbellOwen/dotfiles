@@ -9,6 +9,15 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-
 xterm*font: fixed
 xterm*boldFont: fixed
+XTerm*utf8: true
+!XTerm*faceName: DejaVu Sans Mono Book
+!XTerm*faceName: Terminus
+XTerm*faceName: GohuFont
+XTerm*faceNameDoublesize: WenQuanYi Zen Hei Mono
+XTerm*faceSize: 10 
+! workaround of disappearing underscore ('_') character
+!XTerm*scaleHeight: 1.01
+URxvt.font: xft:Terminus,xft:WenQuanYi Zen Hei Mono 
+

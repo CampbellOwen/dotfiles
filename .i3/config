@@ -8,11 +8,13 @@
 
 set $mod Mod4
 
-set $orange #d64937
+#set $orange #d64937
+set $orange #c47f2c
 set $bgnorm #313131
 set $fgnorm #dcdcdc
 set $bfoc   #7f7f7f
-set $bgunf #3f3f3f
+#set $bgunf  #3f3f3f
+set $bgunf #303030
 set $bunf   #333333
 
 
@@ -84,30 +86,30 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace 1:一
+bindsym $mod+2 workspace 2:二
+bindsym $mod+3 workspace 3:三
+bindsym $mod+4 workspace 4:四
+bindsym $mod+5 workspace 5:五
+bindsym $mod+6 workspace 6:六
+bindsym $mod+7 workspace 7:七
+bindsym $mod+8 workspace 8:八
+bindsym $mod+9 workspace 9:九
+bindsym $mod+0 workspace 10:十
 bindsym $mod+equal workspace vlc
 
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move workspace 1
-bindsym $mod+Shift+2 move workspace 2
-bindsym $mod+Shift+3 move workspace 3
-bindsym $mod+Shift+4 move workspace 4
-bindsym $mod+Shift+5 move workspace 5
-bindsym $mod+Shift+6 move workspace 6
-bindsym $mod+Shift+7 move workspace 7
-bindsym $mod+Shift+8 move workspace 8
-bindsym $mod+Shift+9 move workspace 9
-bindsym $mod+Shift+0 move workspace 10
+bindsym $mod+Shift+1 move workspace 1:一
+bindsym $mod+Shift+2 move workspace 2:二
+bindsym $mod+Shift+3 move workspace 3:三
+bindsym $mod+Shift+4 move workspace 4:四
+bindsym $mod+Shift+5 move workspace 5:五
+bindsym $mod+Shift+6 move workspace 6:六
+bindsym $mod+Shift+7 move workspace 7:七
+bindsym $mod+Shift+8 move workspace 8:八
+bindsym $mod+Shift+9 move workspace 9:九
+bindsym $mod+Shift+0 move workspace 10:十
 bindsym $mod+Shift+equal move workspace vlc
 
 
@@ -165,42 +167,39 @@ bindsym $mod+r mode "resize"
 bar {
 	status_command    i3status
 	position          top
-	mode hide
-	modifier $mod
+	#modifier $mod
 
 	workspace_buttons yes
+	strip_workspace_numbers yes
     
-	font pango:DejaVu Sans Mono 10
+	#font pango:DejaVu Sans Mono 10
+	font pango:GoHuFont, WenQuanYi Zen Hei Mono 8
 
 	colors {
-        background #202020
-        statusline #ffffff
+        background #101010
+        #statusline #d0d0d0
+        statusline $orange
+	set $background #101010 	
+	#separator #66aa11
+	separator #d0d0d0
 
 	# class        	      border 		backgrd 	text
-        focused_workspace     $bfoc 		$orange 	$fgnorm
-        active_workspace      $orange 		$bgunf  	$fgnorm
-        inactive_workspace    $bunf 		$bgunf  	$fgnorm
+        focused_workspace     $bgunf 		$bgunf  	$orange
+        active_workspace      $bgunf 		$background  	$fgnorm
+        inactive_workspace    $background 	$background  	$fgnorm
         urgent_workspace      $bfoc 		#ff1203 	$fgnorm
 	}
 }
-
-exec DISPLAY=:0 feh --bg-fill "$(find /home/vac/Pictures/wallpapers/|shuf -n1)"
 
 bindsym Print exec "scrot '%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/screenshots/'"
 
 bindsym $mod+period workspace next
 bindsym $mod+comma workspace prev
 
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
-exec --no-startup-id urxvt -name scratchpad -e /usr/bin/vim
-for_window [class="URxvt" instance="scratchpad"] move scratchpad
-
 assign [class="Vlc"] vlc
-assign [class="Firefox"] 1
-assign [class="Steam"] 4
-assign [class="Kerbal Space Program"] 3
-assign [class="tixati"] 10
+assign [class="Steam"] 四
+assign [class="Kerbal Space Program"] 三
+assign [class="tixati"] 十
 
 new_window 1pixel
 default_orientation auto
@@ -222,9 +221,7 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system" 
 
 exec redshift
-exec conky
 exec xautolock -time 10 -locker "xlock -mode matrix" -nowlocker "xlock -mode matrix"
-exec (ibus-daemon) &
 exec (udiskie) & 
 
 bindsym $mod+m exec "xautolock -locknow"
@@ -234,11 +231,10 @@ client.focused          $bfoc   $orange $fgnorm $bfoc
 client.focused_inactive $orange $bgunf  $fgnorm #484e50
 client.unfocused        $bunf   $bgunf  $fgnorm #292d2e
 client.urgent           $bfoc   $orange $fgnorm #900000
-exec /usr/bin/pa-applet
 exec /usr/bin/nm-applet
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -- -5%
+bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -- -5%
 exec --no-startup-id xset dpms 600
 exec feh --bg-scale ~/Downloads/PANIC.png
 

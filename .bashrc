@@ -64,7 +64,7 @@ ex ()
 #export PS1="\[$(tput bold)\]\[$(tput setaf 3)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 3)\]\h\[$(tput setaf 4)\]:\W\\$ \[$(tput sgr0)\]"
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
-export PS1="\[$(tput setaf 1)\][\[$(tput setaf 7)\]\u\[$(tput setaf 1)\]][\[$(tput setaf 7)\]\h\[$(tput setaf 1)\]][\[$(tput setaf 7)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+export PS1="\[$(tput setaf 3)\][\[$(tput setaf 7)\]\u\[$(tput setaf 3)\]][\[$(tput setaf 7)\]\w\[$(tput setaf 3)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 
 export GTK_IM_MODULE=ibus
