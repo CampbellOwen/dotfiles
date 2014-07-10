@@ -33,7 +33,7 @@ alias adb='~/Android/android-sdk-linux/platform-tools/adb'
 alias piwi='ssh -D 8080 bunny@gray.illiteratezombie.com'
 alias amazon='ssh -D 8080 -i ~/.ssh/Tunnel.pem ubuntu@ec2-54-178-233-50.ap-northeast-1.compute.amazonaws.com'
 alias connectify='nmcli con up uuid bbd6c958-559e-477a-b028-d02bce3f6aed'
-alias prettygit = 'git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+alias prettygit='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
 
 # ex - archive extractor
 # usage: ex <file>
