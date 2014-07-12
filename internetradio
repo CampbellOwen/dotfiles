@@ -1,0 +1,21 @@
+#!/bin/bash
+mpg123 -C \
+http://ice.somafm.com/secretagent \
+http://ice.somafm.com/groovesalad \
+http://ice.somafm.com/lush \
+http://ice.somafm.com/indiepop \
+http://ice.somafm.com/bootliquor \
+http://ice.somafm.com/suburbsofgoa \
+http://ice.somafm.com/digitalis \
+http://ice.somafm.com/doomed \
+http://ice.somafm.com/covers \
+http://ice.somafm.com/tags \
+http://ice.somafm.com/poptron \
+http://ice.somafm.com/beatblender \
+http://ice.somafm.com/sonicuniverse \
+http://ice.somafm.com/dronezone \
+http://ice.somafm.com/cliqhop \
+http://ice.somafm.com/spacestation \
+http://ice.somafm.com/u80s \
+http://ice.somafm.com/brfm \
+http://ice.somafm.com/xmasinfrisko
