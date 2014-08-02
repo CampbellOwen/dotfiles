@@ -71,4 +71,3 @@ export PS1="\[$(tput setaf 3)\][\[$(tput setaf 7)\]\u\[$(tput setaf 3)\]][\[$(tp
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-

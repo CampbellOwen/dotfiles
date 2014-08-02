@@ -96,7 +96,6 @@ bindsym $mod+7 workspace 7:七
 bindsym $mod+8 workspace 8:八
 bindsym $mod+9 workspace 9:九
 bindsym $mod+0 workspace 10:十
-bindsym $mod+equal workspace vlc
 
 
 # move focused container to workspace
@@ -110,7 +109,6 @@ bindsym $mod+Shift+7 move workspace 7:七
 bindsym $mod+Shift+8 move workspace 8:八
 bindsym $mod+Shift+9 move workspace 9:九
 bindsym $mod+Shift+0 move workspace 10:十
-bindsym $mod+Shift+equal move workspace vlc
 
 
 # reload the configuration file
@@ -196,10 +194,6 @@ bindsym Print exec "scrot '%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/screenshots
 bindsym $mod+period workspace next
 bindsym $mod+comma workspace prev
 
-assign [class="Vlc"] vlc
-assign [class="Steam"] 四
-assign [class="Kerbal Space Program"] 三
-assign [class="tixati"] 十
 
 new_window 1pixel
 default_orientation auto
@@ -232,9 +226,9 @@ client.focused_inactive $orange $bgunf  $fgnorm #484e50
 client.unfocused        $bunf   $bgunf  $fgnorm #292d2e
 client.urgent           $bfoc   $orange $fgnorm #900000
 exec /usr/bin/nm-applet
-bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -- -5%
+bindsym XF86AudioMute exec amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 exec --no-startup-id xset dpms 600
-exec feh --bg-scale ~/Downloads/PANIC.png
-
+exec feh --bg-scale ~/pictures/wallpapers/41621_anime_scenery.jpg
+exec ibus-daemon --xim -d
