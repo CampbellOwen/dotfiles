@@ -16,7 +16,7 @@ set $bfoc   #7f7f7f
 #set $bgunf  #3f3f3f
 set $bgunf #303030
 set $bunf   #333333
-
+set $green #66aa11
 
 workspace_auto_back_and_forth yes
 
@@ -185,7 +185,7 @@ bar {
         focused_workspace     $bgunf 		$bgunf  	$orange
         active_workspace      $bgunf 		$background  	$fgnorm
         inactive_workspace    $background 	$background  	$fgnorm
-        urgent_workspace      $bfoc 		#ff1203 	$fgnorm
+        urgent_workspace      $bfoc 		$green  	$fgnorm
 	}
 }
 
@@ -225,10 +225,12 @@ client.focused          $bfoc   $orange $fgnorm $bfoc
 client.focused_inactive $orange $bgunf  $fgnorm #484e50
 client.unfocused        $bunf   $bgunf  $fgnorm #292d2e
 client.urgent           $bfoc   $orange $fgnorm #900000
-exec /usr/bin/nm-applet
+
+exec --no-startup-id nm-applet
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 exec --no-startup-id xset dpms 600
 exec feh --bg-scale ~/pictures/wallpapers/41621_anime_scenery.jpg
 exec ibus-daemon --xim -d
+bindsym XF86TouchpadToggle exec toggletouchpad
