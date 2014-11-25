@@ -19,6 +19,7 @@ shopt -s nocaseglob
 export HISTSIZE=10000
 export HISTFILESIZE=${HISTSIZE}
 export HISTCONTROL=ignoreboth
+export EDITOR='vim'
 
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -29,11 +30,12 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias go='xdg-open'
-alias adb='~/Android/android-sdk-linux/platform-tools/adb'
+alias ardb='~/Android/android-sdk-linux/platform-tools/adb'
 alias piwi='ssh -D 8080 bunny@gray.illiteratezombie.com'
-alias amazon='ssh -D 8080 -i ~/.ssh/Tunnel.pem ubuntu@ec2-54-178-233-50.ap-northeast-1.compute.amazonaws.com'
+alias amazon='ssh -D 8080 -i ~/.ssh/Tunnel.pem ubuntu@ec2-54-64-243-251.ap-northeast-1.compute.amazonaws.com'
 alias connectify='nmcli con up uuid bbd6c958-559e-477a-b028-d02bce3f6aed'
 alias prettygit='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
+alias digitalocean='ssh -D 8080 owen@178.62.228.202 '
 
 # ex - archive extractor
 # usage: ex <file>
@@ -65,7 +67,7 @@ ex ()
 #export PS1="\[$(tput bold)\]\[$(tput setaf 3)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 3)\]\h\[$(tput setaf 4)\]:\W\\$ \[$(tput sgr0)\]"
 
 # Custom bash prompt via kirsle.net/wizards/ps1.html
-export PS1="\[$(tput setaf 3)\][\[$(tput setaf 7)\]\h\[$(tput setaf 3)\]]$(tput setaf 3)\][\[$(tput setaf 7)\]\u\[$(tput setaf 3)\]][\[$(tput setaf 7)\]\w\[$(tput setaf 3)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
+export PS1="\[$(tput setaf 3)\][\[$(tput setaf 7)\]\h\[$(tput setaf 3)\]]\[$(tput setaf 3)\][\[$(tput setaf 7)\]\u\[$(tput setaf 3)\]][\[$(tput setaf 7)\]\w\[$(tput setaf 3)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
 
 export GTK_IM_MODULE=ibus
