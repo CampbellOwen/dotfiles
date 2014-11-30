@@ -185,11 +185,11 @@ bar {
         focused_workspace     $bgunf 		$bgunf  	$orange
         active_workspace      $bgunf 		$background  	$fgnorm
         inactive_workspace    $background 	$background  	$fgnorm
-        urgent_workspace      $bfoc 		$green  	$fgnorm
+        urgent_workspace      $background 	$background  	$green
 	}
 }
 
-bindsym Print exec "scrot '%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/Pictures/screenshots/'"
+bindsym Print exec "scrot '%Y-%m-%d_%H%M%S.png' -e 'mv $f ~/pictures/screenshots/', notify-send 'Screenshot Taken!'"
 
 bindsym $mod+period workspace next
 bindsym $mod+comma workspace prev
@@ -214,9 +214,21 @@ mode "$mode_system" {
 }
 bindsym $mod+Pause mode "$mode_system" 
 
+set $mode_screen Mirror VGA (m), Extend VGA (e), Reset (r)
+mode "$mode_screen" {
+	bindsym m exec "xrandr --output VGA --auto --output LVDS1 --auto", mode "default"
+	bindsym e exec "xrandr --output VGA --auto --LVDS1 --auto --output VGA --right-of LVDS", mode "default"
+	bindsym r exec "xrandr --output VGA --off --output LVDS1 --auto", mode "default"
+	
+	#back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+F7 mode "$mode_screen"
 exec redshift
-exec xautolock -time 10 -locker "xlock -mode matrix" -nowlocker "xlock -mode matrix"
-exec (udiskie) & 
+exec xautolock -time 10 -locker lock
+exec (udiskie &)
+exec twmnd
 
 bindsym $mod+m exec "xautolock -locknow"
 
@@ -230,7 +242,7 @@ exec --no-startup-id nm-applet
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
-exec --no-startup-id xset dpms 600
-exec feh --bg-scale ~/pictures/wallpapers/41621_anime_scenery.jpg
-exec ibus-daemon --xim -d
 bindsym XF86TouchpadToggle exec toggletouchpad
+exec --no-startup-id xset dpms 600
+exec feh --bg-scale ~/pictures/wallpapers/colourful.jpg
+exec ibus-daemon --xim -d
