@@ -15,4 +15,3 @@ nmap <F9> :SCCompile<cr>
 nmap <F10> :SCCompileRun<cr>
 set nocompatible
 set t_Co=16
-hi comment ctermfg=blue
