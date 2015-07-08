@@ -26,16 +26,15 @@ alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias grep='grep --color=tty -d skip'
 alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
+alias df='df -h --total'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano PKGBUILD'
 alias go='xdg-open'
-alias ardb='~/Android/android-sdk-linux/platform-tools/adb'
-alias piwi='ssh -D 8080 bunny@gray.illiteratezombie.com'
-alias amazon='ssh -D 8080 -i ~/.ssh/Tunnel.pem ubuntu@ec2-54-64-243-251.ap-northeast-1.compute.amazonaws.com'
-alias connectify='nmcli con up uuid bbd6c958-559e-477a-b028-d02bce3f6aed'
+alias piwi='ssh -D 8181 bunny@gray.illiteratezombie.com'
+alias amazon='ssh -D 8181 -i ~/.ssh/Tunnel.pem ubuntu@ec2-54-64-243-251.ap-northeast-1.compute.amazonaws.com'
 alias prettygit='git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"'
-alias digitalocean='ssh -D 8080 owen@178.62.228.202 '
+alias digitalocean='ssh -D 8080 owen@104.236.167.170'
+alias startx='ssh-agent startx'
 
 # ex - archive extractor
 # usage: ex <file>

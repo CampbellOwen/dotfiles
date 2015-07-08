@@ -1,23 +1,20 @@
-#include "/home/owen/.Xresources_molokai"
-!#include "/home/owen/.Xresources_jwr"
-!#include "/home/owen/.Xresources_zenburn"
-!#include "/home/owen/.solarized"
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
-xterm*font: fixed
-xterm*boldFont: fixed
-XTerm*utf8: true
-!XTerm*faceName: DejaVu Sans Mono Book
+!#include "/home/owen/.Xresources_molokai"
+#include "/home/owen/.Xresources_google"
+!Xft.dpi: 96
+!Xft.antialias: true
+!Xft.hinting: true
+!Xft.rgba: rgb
+!Xft.autohint: false
+!Xft.hintstyle: hintslight
+!Xft.lcdfilter: lcddefault
+!xterm*font: fixed
+!xterm*boldFont: fixed
+!XTerm*utf8: true
 !XTerm*faceName: Terminus
-XTerm*faceName: GohuFont
-XTerm*faceNameDoublesize: WenQuanYi Zen Hei Mono
-XTerm*faceSize: 10 
+!XTerm*faceNameDoublesize: WenQuanYi Zen Hei Mono
+!XTerm*faceSize: 10 
 ! workaround of disappearing underscore ('_') character
 !XTerm*scaleHeight: 1.01
-URxvt.font: xft:Terminus,xft:WenQuanYi Zen Hei Mono 
-
+URxvt.font: xft:Terminus:pixelsize=11,xft:WenQuanYi Zen Hei Mono 
+URxvt.scrollBar: false
+URxvt.intensityStyles: false

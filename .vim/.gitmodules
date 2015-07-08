@@ -1,0 +1,18 @@
+[submodule "bundle/SingleCompile"]
+	path = bundle/SingleCompile
+	url = git@github.com:xuhdev/SingleCompile.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule "bundle/tlib_vim"]
+	path = bundle/tlib_vim
+	url = git@github.com:tomtom/tlib_vim.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = git@github.com:MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = git@github.com:Lokaltog/vim-easymotion.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = git@github.com:garbas/vim-snipmate.git
