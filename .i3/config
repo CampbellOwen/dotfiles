@@ -247,6 +247,7 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 bindsym XF86TouchpadToggle exec toggletouchpad
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86ScreenSaver exec lock3
 exec --no-startup-id xset dpms 600
 exec feh --bg-scale ~/pictures/wallpapers/misty.jpg
 exec ibus-daemon --xim -d
